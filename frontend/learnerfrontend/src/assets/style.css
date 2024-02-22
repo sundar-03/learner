@@ -1,0 +1,100 @@
+body
+{
+    background-color: blueviolet;
+}
+
+.menu
+{
+    text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+    .heading
+    {
+        width: 40%;
+        margin: 2%;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .inputField {
+        border: 2px solid black;
+        margin: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    .heading
+    {
+        width: 40%;
+        margin: 2%;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .inputField {
+        border: 2px solid black;
+        margin: 2%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+  }
+
+.fieldContainer
+{
+    width: 40%;
+}
+
+.playContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appName
+{
+    margin: 2%;
+}
+
+.returnButton
+{
+    margin: 2%;
+}
+
+.gameArea, .fieldInfo
+{
+    width: 40%;
+}
+
+.checkButton, .nextButton
+{
+    text-align: center;
+}
+
+.inputTag
+{
+    width: 70%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;    
+}
+ 
+.answer, .explanation, .question
+{
+    border: 2px solid black;
+    margin: 2%;
+    overflow: auto;
+}
