@@ -24,7 +24,7 @@ function PlayComponent()
     
     //equivalent to component did mount
     React.useEffect(() => {
-        axios.get("http://13.233.21.79:8080/question").then((response) => {
+        axios.get("http://localhost:8080/question").then((response) => {
             const questionData = { "id" : response.data.id,  "question": response.data.question, "explanation": response.data.explanation, "answer": response.data.answer};
             changeQuestionInfo(questionData);
           });
@@ -38,7 +38,7 @@ function PlayComponent()
            status = "true"
         }
          // update that answer found correct or not
-        axios.post("http://13.233.21.79:8080/updateStatus", {
+        axios.post("http://localhost:8080/updateStatus", {
             "id": questionInfo.id,
             "status": status
             }).then((response) => 
@@ -60,7 +60,7 @@ function PlayComponent()
     const next = (e) => {
         changeQuestionState(!questionMode)
 
-        axios.post("http://13.233.21.79:8080/questionID", {
+        axios.post("http://localhost:8080/questionID", {
             "id": questionInfo.id,
             "status": "someValue"
             }).then((response) => 

@@ -32,7 +32,7 @@ function AddQuestion()
     const submission = (e) =>
     {
         // make a post request with data. if it can be created, alert created successfully
-        axios.post("http://13.233.21.79:8080/addQuestion", {
+        axios.post("http://localhost:8080/addQuestion", {
             "id": 2,
             "answer": answerData,
             "question": questionData,
